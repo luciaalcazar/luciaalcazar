@@ -2,45 +2,309 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Web Design Resources — Lucía Alcázar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Classic & Modern Web Design Tools (2025) — Lucía Alcázar</title>
+  <!-- Main + page CSS -->
   <link rel="stylesheet" href="../assets/css/index.css" />
   <link rel="stylesheet" href="../assets/css/resources.css" />
 </head>
 <body>
-  <header>
-    <h1>Classic & Modern Web Design Tools (2025)</h1>
-    <p>Lucía Alcázar · UDIT · Web Foundations</p>
+  <header class="resources-header">
+    <div class="container">
+      <h1>Classic & Modern Web Design Tools (2025)</h1>
+      <p>Lucía Alcázar · UDIT · Web Foundations</p>
+      <p class="muted">Reference page · Research + Classification · Notes + Reflection</p>
+    </div>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="#css">CSS Frameworks</a></li>
-      <li><a href="#ui">UI Libraries</a></li>
-      <li><a href="#ssg">Static Site Generators</a></li>
-      <li><a href="#anim">Animation</a></li>
-      <li><a href="#reflection">Reflection</a></li>
-    </ul>
+  <nav class="resources-nav" aria-label="Sections">
+    <div class="container">
+      <ul>
+        <li><a href="#css">Stylesheets & CSS Frameworks</a></li>
+        <li><a href="#ui">UI Kits & Component Libraries</a></li>
+        <li><a href="#ssg">Static Site Generators</a></li>
+        <li><a href="#anim">Animation & Visual</a></li>
+        <li><a href="#templates">Templates & Kits</a></li>
+        <li><a href="#data">Data & Media</a></li>
+        <li><a href="#reflection">Critical Reflection</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <main>
-    <section id="css">
-      <h2>CSS Frameworks</h2>
-      <article>
-        <h3>Bootstrap 🌐</h3>
-        <p>Framework clásico de CSS, fácil de usar y sin Node.js.</p>
-        <p><strong>Notas:</strong> útil para prototipos rápidos.</p>
-      </article>
+  <!-- Legend for badges -->
+  <section class="container legend" aria-labelledby="legend-heading">
+    <h2 id="legend-heading">Legend · Runtime Requirements</h2>
+    <ul class="legend-list">
+      <li><span class="runtime-badge nodejs">📦 Requires Node.js</span></li>
+      <li><span class="runtime-badge standalone">🌐 No Node.js</span></li>
+      <li><span class="runtime-badge ruby">🟥 Requires Ruby</span></li>
+      <li><span class="runtime-badge binary">🟢 Standalone binary</span></li>
+      <li><span class="runtime-badge saas">☁ SaaS</span></li>
+    </ul>
+  </section>
+
+  <main class="container">
+    <!-- CSS -->
+    <section id="css" class="tools-section" aria-labelledby="css-heading">
+      <h2 id="css-heading">Stylesheets & CSS Frameworks</h2>
+      <div class="tools-grid">
+        <article class="tool-card">
+          <h3><a href="https://getbootstrap.com/" target="_blank" rel="noopener">Bootstrap</a></h3>
+          <span class="runtime-badge standalone">🌐 No Node.js</span>
+          <div class="tool-info">
+            <p><strong>Key:</strong> Grid, utilities, components.</p>
+            <p><strong>Use:</strong> Prototipos rápidos, educación.</p>
+          </div>
+          <div class="personal-notes"><h4>Notes</h4><p>Muy rápido de montar; hay que cuidar la personalidad visual.</p></div>
+        </article>
+
+        <article class="tool-card">
+          <h3><a href="https://tailwindcss.com/" target="_blank" rel="noopener">Tailwind CSS</a></h3>
+          <span class="runtime-badge nodejs">📦 Requires Node.js</span>
+          <div class="tool-info">
+            <p><strong>Key:</strong> Utility-first, tokens, JIT.</p>
+            <p><strong>Use:</strong> Sistemas de diseño a medida.</p>
+          </div>
+          <div class="personal-notes"><h4>Notes</h4><p>Velocidad brutal una vez interiorizado; evitar “class soup”.</p></div>
+        </article>
+
+        <article class="tool-card">
+          <h3><a href="https://get.foundation/" target="_blank" rel="noopener">Foundation</a></h3>
+          <span class="runtime-badge standalone">🌐 No Node.js</span>
+          <div class="tool-info">
+            <p><strong>Key:</strong> Accesibilidad, grid robusto.</p>
+            <p><strong>Use:</strong> Layouts con foco en a11y.</p>
+          </div>
+          <div class="personal-notes"><h4>Notes</h4><p>Menos popular, pero criterios de a11y muy sólidos.</p></div>
+        </article>
+
+        <article class="tool-card">
+          <h3><a href="https://bulma.io/" target="_blank" rel="noopener">Bulma</a></h3>
+          <span class="runtime-badge standalone">🌐 No Node.js</span>
+          <div class="tool-info">
+            <p><strong>Key:</strong> Solo CSS, basado en Flexbox.</p>
+            <p><strong>Use:</strong> Prototipos ligeros sin JS.</p>
+          </div>
+          <div class="personal-notes"><h4>Notes</h4><p>API limpia y fácil; acompaña bien a HTML semántico.</p></div>
+        </article>
+      </div>
     </section>
 
-    <!-- Añade aquí más secciones y herramientas -->
+    <!-- UI Kits -->
+    <section id="ui" class="tools-section" aria-labelledby="ui-heading">
+      <h2 id="ui-heading">UI Kits & Component Libraries</h2>
+      <div class="tools-grid">
+        <article class="tool-card">
+          <h3><a href="https://mui.com/" target="_blank" rel="noopener">Material UI</a></h3>
+          <span class="runtime-badge nodejs">📦 Requires Node.js</span>
+          <div class="tool-info">
+            <p><strong>Key:</strong> Componentes React (Material Design).</p>
+            <p><strong>Use:</strong> Dashboards y portales.</p>
+          </div>
+          <div class="personal-notes"><h4>Notes</h4><p>Muy completo; ojo con el tamaño de bundle y theming.</p></div>
+        </article>
 
-    <section id="reflection">
-      <h2>Critical Reflection (ATELIER)</h2>
-      <p>Tailwind y Eleventy encajan muy bien con mi forma de trabajar porque...</p>
+        <article class="tool-card">
+          <h3><a href="https://ui.shadcn.com/" target="_blank" rel="noopener">shadcn/ui</a></h3>
+          <span class="runtime-badge nodejs">📦 Requires Node.js</span>
+          <div class="tool-info">
+            <p><strong>Key:</strong> Componentes React + Tailwind copiables.</p>
+            <p><strong>Use:</strong> Portfolios y landings SaaS.</p>
+          </div>
+          <div class="personal-notes"><h4>Notes</h4><p>Gran consistencia con Tailwind; centralizar tokens.</p></div>
+        </article>
+
+        <article class="tool-card">
+          <h3><a href="https://ark-ui.com/" target="_blank" rel="noopener">Ark UI</a></h3>
+          <span class="runtime-badge nodejs">📦 Requires Node.js</span>
+          <div class="tool-info">
+            <p><strong>Key:</strong> Primitivas accesibles, headless.</p>
+            <p><strong>Use:</strong> Sistemas de diseño con control total.</p>
+          </div>
+          <div class="personal-notes"><h4>Notes</h4><p>Excelentes defaults de accesibilidad; el estilo va por tu cuenta.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SSGs -->
+    <section id="ssg" class="tools-section" aria-labelledby="ssg-heading">
+      <h2 id="ssg-heading">Static Site Generators</h2>
+      <div class="tools-grid">
+        <article class="tool-card">
+          <h3><a href="https://jekyllrb.com/" target="_blank" rel="noopener">Jekyll</a></h3>
+          <span class="runtime-badge ruby">🟥 Requires Ruby</span>
+          <div class="tool-info">
+            <p><strong>Key:</strong> Markdown + Liquid, GitHub Pages friendly.</p>
+            <p><strong>Use:</strong> Blogs/portfolios simples.</p>
+          </div>
+          <div class="personal-notes"><h4>Notes</h4><p>Se integra perfecto con GitHub Pages.</p></div>
+        </article>
+
+        <article class="tool-card">
+          <h3><a href="https://www.11ty.dev/" target="_blank" rel="noopener">Eleventy (11ty)</a></h3>
+          <span class="runtime-badge nodejs">📦 Requires Node.js</span>
+          <div class="tool-info">
+            <p><strong>Key:</strong> Plantillas flexibles; poca “magia”.</p>
+            <p><strong>Use:</strong> JAMstack ligero.</p>
+          </div>
+          <div class="personal-notes"><h4>Notes</h4><p>Mi equilibrio ideal entre control y simplicidad.</p></div>
+        </article>
+
+        <article class="tool-card">
+          <h3><a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a></h3>
+          <span class="runtime-badge binary">🟢 Standalone binary</span>
+          <div class="tool-info">
+            <p><strong>Key:</strong> Builds ultrarrápidos; binario único.</p>
+            <p><strong>Use:</strong> Sitios grandes o con mucha info.</p>
+          </div>
+          <div class="personal-notes"><h4>Notes</h4><p>Velocísimo; la sintaxis de plantillas requiere curva inicial.</p></div>
+        </article>
+
+        <article class="tool-card">
+          <h3><a href="https://astro.build/" target="_blank" rel="noopener">Astro</a></h3>
+          <span class="runtime-badge nodejs">📦 Requires Node.js</span>
+          <div class="tool-info">
+            <p><strong>Key:</strong> Arquitectura de islas; multi-framework.</p>
+            <p><strong>Use:</strong> Sitios estáticos con interactividad selectiva.</p>
+          </div>
+          <div class="personal-notes"><h4>Notes</h4><p>Grandes defaults de rendimiento; ideal para estudios de caso.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Animation -->
+    <section id="anim" class="tools-section" aria-labelledby="anim-heading">
+      <h2 id="anim-heading">Animation & Visual Libraries</h2>
+      <div class="tools-grid">
+        <article class="tool-card">
+          <h3><a href="https://greensock.com/gsap/" target="_blank" rel="noopener">GSAP</a></h3>
+          <span class="runtime-badge standalone">🌐 No Node.js</span>
+          <div class="tool-info">
+            <p><strong>Key:</strong> Timelines, ScrollTrigger.</p>
+            <p><strong>Use:</strong> Storytelling interactivo.</p>
+          </div>
+          <div class="personal-notes"><h4>Notes</h4><p>Calidad profesional, docs excelentes.</p></div>
+        </article>
+
+        <article class="tool-card">
+          <h3><a href="https://www.framer.com/motion/" target="_blank" rel="noopener">Framer Motion</a></h3>
+          <span class="runtime-badge nodejs">📦 Requires Node.js</span>
+          <div class="tool-info">
+            <p><strong>Key:</strong> Animación para React.</p>
+            <p><strong>Use:</strong> UI polish en portfolios/SaaS.</p>
+          </div>
+          <div class="personal-notes"><h4>Notes</h4><p>API expresiva; encaja con el modelo mental de React.</p></div>
+        </article>
+
+        <article class="tool-card">
+          <h3><a href="https://animejs.com/" target="_blank" rel="noopener">Anime.js</a></h3>
+          <span class="runtime-badge standalone">🌐 No Node.js</span>
+          <div class="tool-info">
+            <p><strong>Key:</strong> Motor ligero de animación.</p>
+            <p><strong>Use:</strong> Micro-interacciones e ilustraciones.</p>
+          </div>
+          <div class="personal-notes"><h4>Notes</h4><p>Ideal para efectos rápidos sin setup pesado.</p></div>
+        </article>
+
+        <article class="tool-card">
+          <h3><a href="https://michalsnik.github.io/aos/" target="_blank" rel="noopener">AOS</a></h3>
+          <span class="runtime-badge standalone">🌐 No Node.js</span>
+          <div class="tool-info">
+            <p><strong>Key:</strong> Animaciones on-scroll.</p>
+            <p><strong>Use:</strong> Landings y presentaciones.</p>
+          </div>
+          <div class="personal-notes"><h4>Notes</h4><p>“Drop-in delight”; usar con moderación por accesibilidad.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Templates -->
+    <section id="templates" class="tools-section" aria-labelledby="templates-heading">
+      <h2 id="templates-heading">Templates & Kits</h2>
+      <div class="tools-grid">
+        <article class="tool-card">
+          <h3><a href="https://html5up.net/" target="_blank" rel="noopener">HTML5 UP</a></h3>
+          <span class="runtime-badge standalone">🌐 No Node.js</span>
+          <div class="tool-info">
+            <p><strong>Key:</strong> Plantillas responsive gratuitas.</p>
+            <p><strong>Use:</strong> Despliegues de estudiante y rápidos.</p>
+          </div>
+          <div class="personal-notes"><h4>Notes</h4><p>Buen punto de partida; conviene mejorar semántica.</p></div>
+        </article>
+
+        <article class="tool-card">
+          <h3><a href="https://flowbite.com/" target="_blank" rel="noopener">Flowbite</a></h3>
+          <span class="runtime-badge nodejs">📦 Requires Node.js</span>
+          <div class="tool-info">
+            <p><strong>Key:</strong> Librería de componentes para Tailwind.</p>
+            <p><strong>Use:</strong> Montaje rápido de UI con Tailwind.</p>
+          </div>
+          <div class="personal-notes"><h4>Notes</h4><p>Ahorra tiempo; revisar a11y en combos personalizados.</p></div>
+        </article>
+
+        <article class="tool-card">
+          <h3><a href="https://cruip.com/" target="_blank" rel="noopener">Cruip</a></h3>
+          <span class="runtime-badge nodejs">📦 Requires Node.js (React)</span>
+          <div class="tool-info">
+            <p><strong>Key:</strong> Templates premium/free (React/Tailwind).</p>
+            <p><strong>Use:</strong> Landing de startups.</p>
+          </div>
+          <div class="personal-notes"><h4>Notes</h4><p>Estética cuidada; revisar licencias para clase.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Data & Media -->
+    <section id="data" class="tools-section" aria-labelledby="data-heading">
+      <h2 id="data-heading">Data & Media Services</h2>
+      <div class="tools-grid">
+        <article class="tool-card">
+          <h3><a href="https://hygraph.com/" target="_blank" rel="noopener">Hygraph</a></h3>
+          <span class="runtime-badge saas">☁ SaaS</span>
+          <div class="tool-info">
+            <p><strong>Key:</strong> Headless CMS con GraphQL.</p>
+            <p><strong>Use:</strong> Gestión de contenido estructurado.</p>
+          </div>
+          <div class="personal-notes"><h4>Notes</h4><p>Ideal cuando el modelo de contenido importa; aprender lo básico de GraphQL.</p></div>
+        </article>
+
+        <article class="tool-card">
+          <h3><a href="https://imagekit.io/" target="_blank" rel="noopener">ImageKit.io</a></h3>
+          <span class="runtime-badge saas">☁ SaaS</span>
+          <div class="tool-info">
+            <p><strong>Key:</strong> CDN de imágenes, optimización y transforms.</p>
+            <p><strong>Use:</strong> Rendimiento, responsive media.</p>
+          </div>
+          <div class="personal-notes"><h4>Notes</h4><p>Enchufar y listo; subidón de Lighthouse.</p></div>
+        </article>
+
+        <article class="tool-card">
+          <h3><a href="https://www.netlifycms.org/" target="_blank" rel="noopener">Netlify CMS</a></h3>
+          <span class="runtime-badge standalone">🌐 No Node.js</span>
+          <div class="tool-info">
+            <p><strong>Key:</strong> CMS basado en Git con interfaz web.</p>
+            <p><strong>Use:</strong> CMS para sitios estáticos.</p>
+          </div>
+          <div class="personal-notes"><h4>Notes</h4><p>Experiencia de editor sin servidores; perfecto para equipos pequeños.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Reflection -->
+    <section id="reflection" class="tools-section" aria-labelledby="reflection-heading">
+      <h2 id="reflection-heading">Critical Reflection (ATELIER)</h2>
+      <div class="reflection">
+        <p><strong>Workflow fit:</strong> Tailwind + shadcn/ui para velocidad y consistencia; Eleventy o Astro según la interactividad; GSAP para secciones de alto impacto.</p>
+        <p><strong>Trade-offs:</strong> <em>Speed vs. Flexibility</em> — las plantillas aceleran, pero pueden limitar originalidad. <em>Dependencies vs. Simplicity</em> — Node aporta poder, pero también setup. <em>Node.js vs. Standalone</em> — para entregas rápidas en clase, mejor standalone/CDN. <em>Creativity vs. Convention</em> — usar librerías sin perder voz propia.</p>
+        <p><strong>Portfolio use:</strong> Eleventy/Hugo para piezas editoriales (como <em>Specimen</em>); Astro para casos interactivos; mantener tokens de Tailwind para coherencia visual entre proyectos.</p>
+      </div>
     </section>
   </main>
+
+  <footer class="resources-footer">
+    <div class="container">
+      <p>© 2025 · Web Foundations · WEB ATELIER · Built by Lucía Alcázar</p>
+    </div>
+  </footer>
 </body>
 </html>
-
-

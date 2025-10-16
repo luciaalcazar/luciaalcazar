@@ -1,0 +1,107 @@
+/* ===== MAIN CSS - RESET + VARIABLES ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Colores principales */
+  --primary: #2563eb;
+  --secondary: #64748b;
+  --accent: #f59e0b;
+  --text: #1e293b;
+  --bg: #f8fafc;
+  --white: #fff;
+  --border: #e2e8f0;
+
+  /* Espaciado y tipografía */
+  --xs: 0.5rem;
+  --sm: 1rem;
+  --md: 1.5rem;
+  --lg: 2rem;
+  --xl: 3rem;
+
+  /* Tamaños de fuente */
+  --fs-sm: 0.875rem;
+  --fs: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.25rem;
+  --fs-2xl: 1.5rem;
+  --fs-3xl: 1.875rem;
+
+  /* Bordes y sombras */
+  --radius: 0.5rem;
+  --radius-lg: 0.75rem;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== BASE ===== */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--md);
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--sm);
+}
+
+h1 { font-size: var(--fs-3xl); }
+h2 { font-size: var(--fs-2xl); }
+h3 { font-size: var(--fs-xl); }
+
+p { margin-bottom: var(--sm); }
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* ===== BOTONES ===== */
+.btn {
+  display: inline-block;
+  padding: var(--xs) var(--md);
+  background: var(--primary);
+  color: var(--white);
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--accent);
+}
+
+/* ===== UTILIDADES ===== */
+.text-center { text-align: center; }
+
+.mb-sm { margin-bottom: var(--sm); }
+.mb-md { margin-bottom: var(--md); }
+.mb-lg { margin-bottom: var(--lg); }
+
+.mt-sm { margin-top: var(--sm); }
+.mt-md { margin-top: var(--md); }
+.mt-lg { margin-top: var(--lg); }
